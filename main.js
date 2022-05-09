@@ -6,6 +6,9 @@ const input = document.getElementById('input');
 
 const pressed = [];
 function keyDown(e) {
+    if(!keyBoard.ASCIIarray.includes(e.keyCode)){
+        return;
+    }
   if (document.getElementById(`${e.keyCode}`).innerText.length === 1) {
     e.preventDefault();
   }
