@@ -24,6 +24,9 @@ function keyUp(e) {
   const result = keyBoard.keyUp(e);
   if (result !== undefined) {
     keyBoard = new keyboard.Keyboard(result);
+    document.addEventListener('keydown', keyDown);
+    document.addEventListener('keyup', keyUp);
+    document.getElementById('keyboard').addEventListener('click', keyClick);
   }
   const inputKeyUp = document.getElementById('input');
   inputKeyUp.focus();
